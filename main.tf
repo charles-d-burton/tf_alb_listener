@@ -24,16 +24,6 @@ resource "aws_security_group_rule" "allow_https" {
   security_group_id = "${var.security_group_id}"
 }
 
-resource "aws_security_group_rule" "allow_outbound" {
-  type        = "egress"
-  from_port   = 0
-  to_port     = 0
-  protocol    = "tcp"
-  cidr_blocks = ["0.0.0.0/0"]
-
-  security_group_id = "${var.security_group_id}"
-}
-
 ######
 #Creates the target group to put your listeners in
 #####
