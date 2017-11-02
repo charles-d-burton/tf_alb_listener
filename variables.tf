@@ -32,11 +32,16 @@ variable "health_check_matcher" {
   default = 200
 }
 
-#Misc variables
+#Network variables
 variable "inbound_cidr_blocks" {
   description = "The cidr blocks to allow inbound"
   type        = "list"
   default     = ["0.0.0.0/0"]
+}
+
+variable "vpc_id" {
+  description = "The VPC to use to place the lister in"
+  type        = "string"
 }
 
 #Target group configurations
