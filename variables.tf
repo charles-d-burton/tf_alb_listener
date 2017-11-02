@@ -75,7 +75,7 @@ variable "alb_arn" {
   description = "The arn of the load balancer to connect to"
 }
 
-variable "ssl_certificat_id" {
+variable "ssl_certificate_id" {
   description = "The ARN of the ACM managed SSL Cert"
 }
 

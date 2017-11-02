@@ -8,7 +8,7 @@ resource "aws_security_group_rule" "allow_http" {
   from_port   = "${var.http_port}"
   to_port     = 0
   protocol    = "tcp"
-  cidr_blocks = ["0.0.0.0/0"]
+  cidr_blocks = ["${var.inbound_cidr_blocks}"]
 
   security_group_id = "${var.security_group_id}"
 }
@@ -19,7 +19,7 @@ resource "aws_security_group_rule" "allow_https" {
   from_port   = "${var.https_port}"
   to_port     = 0
   protocol    = "tcp"
-  cidr_blocks = ["0.0.0.0/0"]
+  cidr_blocks = ["${var.inbound_cidr_blocks}"]
 
   security_group_id = "${var.security_group_id}"
 }
