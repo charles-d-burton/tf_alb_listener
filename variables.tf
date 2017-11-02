@@ -32,6 +32,13 @@ variable "health_check_matcher" {
   default = 200
 }
 
+#Misc variables
+variable "inbound_cidr_blocks" {
+  description = "The cidr blocks to allow inbound"
+  type        = "list"
+  default     = ["0.0.0.0/0"]
+}
+
 #Target group configurations
 variable "connection_draining_delay" {
   description = "How long the load balancer will allow connections to drain"
