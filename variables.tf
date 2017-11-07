@@ -92,11 +92,13 @@ variable "use_http" {
 
 variable "http_port" {
   type        = "string"
+  default     = ""
   description = "The port to listen on for http traffice"
 }
 
 variable "https_port" {
   type        = "string"
+  default     = ""
   description = "The https port to listen on"
 }
 
