@@ -77,6 +77,7 @@ variable "alb_arn" {
 
 variable "ssl_certificate_id" {
   description = "The ARN of the ACM managed SSL Cert"
+  default     = ""
 }
 
 variable "use_https" {
