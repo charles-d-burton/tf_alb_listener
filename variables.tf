@@ -129,8 +129,12 @@ variable "path_list" {
   default     = []
 }
 
-variable "host_host" {
+variable "host_list" {
   description = "The list of hosts to match"
   type        = "list"
   default     = []
+}
+
+variable "service_name" {
+  description = "The name of the service you are creating"
 }
