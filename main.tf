@@ -6,7 +6,7 @@ resource "aws_security_group_rule" "allow_http" {
   count       = "${var.use_http}"
   type        = "ingress"
   from_port   = "${var.http_port}"
-  to_port     = 0
+  to_port     = "${var.http_port}"
   protocol    = "tcp"
   cidr_blocks = ["${var.inbound_cidr_blocks}"]
 
@@ -17,7 +17,7 @@ resource "aws_security_group_rule" "allow_https" {
   count       = "${var.use_https}"
   type        = "ingress"
   from_port   = "${var.https_port}"
-  to_port     = 0
+  to_port     = "${var.https_port}"
   protocol    = "tcp"
   cidr_blocks = ["${var.inbound_cidr_blocks}"]
 
